@@ -2,15 +2,15 @@ version: '2'
 
 services:
    db:
-     image: daocloud.io/library/mysql:latest
+     image: mysql:5.7
      volumes:
        - ./db_data:/var/lib/mysql
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: rootnickfeng
+       MYSQL_ROOT_PASSWORD: hulkcao@123
        MYSQL_DATABASE: wordpress
-       MYSQL_USER: nickfeng
-       MYSQL_PASSWORD: nickfeng
+       MYSQL_USER: hulkcao
+       MYSQL_PASSWORD: hulkcao@123
 
    adminer:
        image: adminer
@@ -30,5 +30,5 @@ services:
        - ./letsencrypt_data:/etc/letsencrypt
      environment:
        WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_USER: nickfeng
-       WORDPRESS_DB_PASSWORD: nickfeng
+       WORDPRESS_DB_USER: hulkcao
+       WORDPRESS_DB_PASSWORD: hulkcao@123
